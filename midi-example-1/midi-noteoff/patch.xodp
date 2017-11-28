@@ -1,0 +1,61 @@
+{
+  "description": "stop a note (from noteon). note and channel must match. only stops on 'stop' pulse",
+  "nodes": [
+    {
+      "id": "Bk7yfK4ceM",
+      "position": {
+        "x": 134,
+        "y": 101
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "boundValues": {
+        "__out__": 64
+      },
+      "description": "often volume, depends on the instrument",
+      "id": "H1xkGY4cgz",
+      "label": "velocity",
+      "position": {
+        "x": 67,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 1
+      },
+      "id": "HJWJMFVqez",
+      "label": "channel",
+      "position": {
+        "x": 270,
+        "y": -1
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 60
+      },
+      "description": "see midi note numbers",
+      "id": "HyJGFN9lf",
+      "label": "note",
+      "position": {
+        "x": -1,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "send the stop",
+      "id": "SJz1GFEcef",
+      "label": "stop",
+      "position": {
+        "x": 339,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    }
+  ]
+}

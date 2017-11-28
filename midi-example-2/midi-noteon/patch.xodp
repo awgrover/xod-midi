@@ -1,0 +1,71 @@
+{
+  "description": "start playing a note.\nuse noteoff to stop it: same channel, same note. Only starts on 'start' pulse",
+  "nodes": [
+    {
+      "boundValues": {
+        "__out__": 64
+      },
+      "description": "often volume, depends on the instrument",
+      "id": "BJz4_d4qgf",
+      "label": "velocity",
+      "position": {
+        "x": 68,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 1
+      },
+      "id": "BkQ4u_N5gz",
+      "label": "channel",
+      "position": {
+        "x": 271,
+        "y": -1
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 60
+      },
+      "description": "see midi note numbers",
+      "id": "BkZVuuVcxf",
+      "label": "note",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "send the noteon",
+      "id": "HJv3OVcgG",
+      "label": "start",
+      "position": {
+        "x": 340,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    },
+    {
+      "id": "HkN__V9gM",
+      "position": {
+        "x": 135,
+        "y": 101
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "description": "from config",
+      "id": "HkegHp8cez",
+      "label": "midi-index",
+      "position": {
+        "x": 408,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    }
+  ]
+}

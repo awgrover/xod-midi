@@ -1,0 +1,75 @@
+{
+  "comments": [
+    {
+      "content": "midi::MidiInterface<Type, Settings> MIDI;\neval: construct it, begin",
+      "id": "Syb23m5gz",
+      "position": {
+        "x": 272,
+        "y": 204
+      },
+      "size": {
+        "height": 51,
+        "width": 408
+      }
+    },
+    {
+      "content": "if listening, then we should set continous,\nbut we can't\nand we want never if not listening\nno such mechanism\n",
+      "id": "rJVI045gz",
+      "position": {
+        "x": 170,
+        "y": 306
+      },
+      "size": {
+        "height": 51,
+        "width": 408
+      }
+    }
+  ],
+  "description": "You need one of these to use midi. You can have several of these, one per serial",
+  "nodes": [
+    {
+      "boundValues": {
+        "__out__": -1
+      },
+      "description": "-1 : Serial, or Serial1 on multi-serial arduinos (like Mega, Due)\n0 : Serial\n1 : Serial1\n...",
+      "id": "B1CYim5lf",
+      "label": "SerialPort",
+      "position": {
+        "x": 204,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "id": "BkpxhQ5gG",
+      "position": {
+        "x": 204,
+        "y": 204
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "boundValues": {
+        "__out__": 1
+      },
+      "description": "what channel we listen to (and do midi-thru with).\n0 for omni\n1..16 for specific\nanything else is off.",
+      "id": "H1tBr4qxf",
+      "label": "listen-channel",
+      "position": {
+        "x": 272,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "connect to other midi nodes",
+      "id": "r1tz3LqxG",
+      "label": "midi-index",
+      "position": {
+        "x": 204,
+        "y": 408
+      },
+      "type": "xod/patch-nodes/output-number"
+    }
+  ]
+}

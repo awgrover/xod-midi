@@ -1,0 +1,118 @@
+{
+  "description": "When a note-on or note-off arrives on the listening channel (see config), output the info and a pulse",
+  "nodes": [
+    {
+      "id": "BJ5_aB9gz",
+      "label": "note",
+      "position": {
+        "x": 136,
+        "y": 306
+      },
+      "type": "xod/patch-nodes/output-number"
+    },
+    {
+      "description": "Pulse when it is a note-on",
+      "id": "H1BLeL9xz",
+      "label": "is-on",
+      "position": {
+        "x": 272,
+        "y": 306
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    },
+    {
+      "boundValues": {
+        "__out__": -1
+      },
+      "description": "-1 : any note\n0..127 : only that note\nUse 'any' and a comparisons on output-note for a range.",
+      "id": "Hyh4ZL5xM",
+      "label": "note",
+      "position": {
+        "x": 340,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "id": "S1guaBqlz",
+      "label": "channel",
+      "position": {
+        "x": 68,
+        "y": 306
+      },
+      "type": "xod/patch-nodes/output-number"
+    },
+    {
+      "id": "SJ2fCH5gf",
+      "label": "is-off",
+      "position": {
+        "x": 340,
+        "y": 306
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    },
+    {
+      "boundValues": {
+        "__out__": true
+      },
+      "description": "set to false to stop responding",
+      "id": "Skv6Tr5ef",
+      "label": "enable",
+      "position": {
+        "x": 136,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-boolean"
+    },
+    {
+      "id": "Sypt6Hclz",
+      "label": "velocity",
+      "position": {
+        "x": 204,
+        "y": 306
+      },
+      "type": "xod/patch-nodes/output-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 1
+      },
+      "description": "1 : only on.\n2: only off.\n0: both",
+      "id": "SytilUqlz",
+      "label": "messages",
+      "position": {
+        "x": 204,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "id": "r1IWaBcxM",
+      "position": {
+        "x": 136,
+        "y": 204
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "description": "from config",
+      "id": "r1QQT8qlf",
+      "label": "midi-index",
+      "position": {
+        "x": 408,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "0: all\n1..16 : only that channel",
+      "id": "ry_fbLqef",
+      "label": "channel",
+      "position": {
+        "x": 272,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    }
+  ]
+}

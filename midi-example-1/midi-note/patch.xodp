@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "content": "schedule ourselves for off",
+      "id": "H1pxHNcgz",
+      "position": {
+        "x": 238,
+        "y": 204
+      },
+      "size": {
+        "height": 51,
+        "width": 340
+      }
+    },
+    {
+      "content": "scratch does duration as \"beats\"\nwhich requires a tempo\ndo a A3->note-number",
+      "id": "ryP-WV9lf",
+      "position": {
+        "x": 238,
+        "y": 0
+      },
+      "size": {
+        "height": 51,
+        "width": 306
+      }
+    }
+  ],
+  "description": "Send a note, with on velocity, off velocity, duration",
+  "nodes": [
+    {
+      "description": "start. Sending a pulse before the duraiton expires will simply send a noteOn again, and reset the duration.",
+      "id": "HJ6ED4qlG",
+      "label": "play",
+      "position": {
+        "x": 374,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    },
+    {
+      "id": "HktlSV5xz",
+      "position": {
+        "x": 170,
+        "y": 204
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "boundValues": {
+        "__out__": 60
+      },
+      "description": "see midi note numbers",
+      "id": "HyB81V5lf",
+      "label": "note",
+      "position": {
+        "x": 34,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 64
+      },
+      "description": "often volume, depends on the instrument",
+      "id": "S12emE9xM",
+      "label": "on-velocity",
+      "position": {
+        "x": 102,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "fires when on-duration expires (which may not be the manifest sound duration due to decay/etc.)",
+      "id": "S1DCLE5lz",
+      "label": "done",
+      "position": {
+        "x": 170,
+        "y": 306
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    },
+    {
+      "description": "some instruments respond to off-velocity, or have decay",
+      "id": "S1lo7V9eM",
+      "label": "off-velocity",
+      "position": {
+        "x": 238,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 1
+      },
+      "id": "SJtkBNqlf",
+      "label": "channel",
+      "position": {
+        "x": 306,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": 670
+      },
+      "id": "ryfB-EqeG",
+      "label": "on-duration",
+      "position": {
+        "x": 170,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    }
+  ]
+}

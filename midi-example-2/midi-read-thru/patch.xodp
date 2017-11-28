@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "content": "MIDI.read()\ninteraction with config.listen...\nkind of like 'button' that needs a heartbeat",
+      "id": "BJpaT75eM",
+      "position": {
+        "x": 136,
+        "y": 204
+      },
+      "size": {
+        "height": 51,
+        "width": 306
+      }
+    }
+  ],
+  "description": "You need one of these or incoming messages will jam the system.\nNot needed if config's listen is set to off.",
+  "nodes": [
+    {
+      "id": "SJdT6Xcgf",
+      "position": {
+        "x": 68,
+        "y": 204
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "description": "from config",
+      "id": "SyFw28cxz",
+      "label": "midi-index",
+      "position": {
+        "x": 136,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "__out__": "CONTINUOUSLY"
+      },
+      "description": "You need a pulse faster than every 31250/10/64 * 2 per sec:  10ms.  300micro-secs is better",
+      "id": "rJekRmcgM",
+      "label": "heartbeat",
+      "position": {
+        "x": 68,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    }
+  ]
+}

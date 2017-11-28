@@ -1,0 +1,655 @@
+{
+  "comments": [
+    {
+      "content": "several serial-port midi's\neach needs a read-thru",
+      "id": "B1RF3E5lG",
+      "position": {
+        "x": 204,
+        "y": 102
+      },
+      "size": {
+        "height": 51,
+        "width": 272
+      }
+    },
+    {
+      "content": "the next note plays until button.\nstart/stop are 2 nodes",
+      "id": "BJbhcEclf",
+      "position": {
+        "x": 476,
+        "y": 714
+      },
+      "size": {
+        "height": 51,
+        "width": 170
+      }
+    },
+    {
+      "content": "start playing 2 notes in sequence",
+      "id": "S1GMj45eM",
+      "position": {
+        "x": 374,
+        "y": 408
+      },
+      "size": {
+        "height": 51,
+        "width": 170
+      }
+    },
+    {
+      "content": "I used a note \"name\"",
+      "id": "SJMljL9eM",
+      "position": {
+        "x": 204,
+        "y": 306
+      },
+      "size": {
+        "height": 51,
+        "width": 170
+      }
+    },
+    {
+      "content": "only when a note-on arrives,\nshift it an octive and play a short one on channel 2.\n(really needs modulus after 'add')",
+      "id": "Sytt18cxz",
+      "position": {
+        "x": 850,
+        "y": 306
+      },
+      "size": {
+        "height": 153,
+        "width": 272
+      }
+    },
+    {
+      "content": "started by button10, stopped by button11.\nNote by pot.\nOne node: keeps note/channel together",
+      "id": "rJLQ2Vqlz",
+      "position": {
+        "x": 408,
+        "y": 1224
+      },
+      "size": {
+        "height": 153,
+        "width": 204
+      }
+    },
+    {
+      "content": "Log the duration of any/a note.\nBuilt out of nodes, not c++ code\nas an example",
+      "id": "ryhRXLclG",
+      "position": {
+        "x": 782,
+        "y": 510
+      },
+      "size": {
+        "height": 51,
+        "width": 272
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "BJPfhV9gz",
+      "input": {
+        "nodeId": "rJtAjV5xG",
+        "pinKey": "B1C_iV5xG"
+      },
+      "output": {
+        "nodeId": "HkejZ2NclG",
+        "pinKey": "BJxRgAO8-"
+      }
+    },
+    {
+      "id": "BJvVq4qeM",
+      "input": {
+        "nodeId": "BybEqNqlG",
+        "pinKey": "SJz1GFEcef"
+      },
+      "output": {
+        "nodeId": "Byum9Ecef",
+        "pinKey": "BJxRgAO8-"
+      }
+    },
+    {
+      "id": "BJx7yU5xf",
+      "input": {
+        "nodeId": "SJgYAH5gG",
+        "pinKey": "HyB81V5lf"
+      },
+      "output": {
+        "nodeId": "HJ4a0Hqgf",
+        "pinKey": "SyomIRurDJ-"
+      }
+    },
+    {
+      "id": "BkK89E5lM",
+      "input": {
+        "nodeId": "B1vo_Nclz",
+        "pinKey": "BkZVuuVcxf"
+      },
+      "output": {
+        "nodeId": "HkprqV9gG",
+        "pinKey": "B1x2RV3eZ"
+      }
+    },
+    {
+      "id": "Bkej5Ncef",
+      "input": {
+        "nodeId": "BybEqNqlG",
+        "pinKey": "HyJGFN9lf"
+      },
+      "output": {
+        "nodeId": "HkprqV9gG",
+        "pinKey": "B1x2RV3eZ"
+      }
+    },
+    {
+      "id": "ByPYTU5gz",
+      "input": {
+        "nodeId": "rJtAjV5xG",
+        "pinKey": "r1bKTUcef"
+      },
+      "output": {
+        "nodeId": "rJ4Bpmcxf",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "Bytkjrqxz",
+      "input": {
+        "nodeId": "rJtAjV5xG",
+        "pinKey": "SyluoNqlG"
+      },
+      "output": {
+        "nodeId": "BJ6pcH9lG",
+        "pinKey": "H12bIR_SPyZ"
+      }
+    },
+    {
+      "id": "H1-Yxew5gz",
+      "input": {
+        "nodeId": "r1xtgxP5gG",
+        "pinKey": "SyFw28cxz"
+      },
+      "output": {
+        "nodeId": "SJKgxD9xz",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "HJ8x3EqxG",
+      "input": {
+        "nodeId": "rJtAjV5xG",
+        "pinKey": "BJExOs4clz"
+      },
+      "output": {
+        "nodeId": "Byum9Ecef",
+        "pinKey": "BJxRgAO8-"
+      }
+    },
+    {
+      "id": "HJQ_aLqlM",
+      "input": {
+        "nodeId": "BybEqNqlG",
+        "pinKey": "HydBaUcxM"
+      },
+      "output": {
+        "nodeId": "rJ4Bpmcxf",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "Hkcyp8clG",
+      "input": {
+        "nodeId": "rJWNHNcxf",
+        "pinKey": "Sy1k6Ucgz"
+      },
+      "output": {
+        "nodeId": "rJ4Bpmcxf",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "HygAcScxM",
+      "input": {
+        "nodeId": "BJ6pcH9lG",
+        "pinKey": "BJlzICOSv1-"
+      },
+      "output": {
+        "nodeId": "S1g85H5xz",
+        "pinKey": "H1sM2A12-"
+      }
+    },
+    {
+      "id": "S11aJIqxf",
+      "input": {
+        "nodeId": "SJgYAH5gG",
+        "pinKey": "SJtkBNqlf"
+      },
+      "output": {
+        "nodeId": "S1F21L9xG",
+        "pinKey": "B1x2RV3eZ"
+      }
+    },
+    {
+      "id": "S1v6PEcxM",
+      "input": {
+        "nodeId": "H12Fv45xM",
+        "pinKey": "HyB81V5lf"
+      },
+      "output": {
+        "nodeId": "By2iwN9lf",
+        "pinKey": "B1x2RV3eZ"
+      }
+    },
+    {
+      "id": "SJWsZnNqef",
+      "input": {
+        "nodeId": "HkejZ2NclG",
+        "pinKey": "H1v3lCu8-"
+      },
+      "output": {
+        "nodeId": "BJjb3Vqlf",
+        "pinKey": "BJ--G1tI-"
+      }
+    },
+    {
+      "id": "SJbM_49lz",
+      "input": {
+        "nodeId": "H12Fv45xM",
+        "pinKey": "ryfB-EqeG"
+      },
+      "output": {
+        "nodeId": "rka-ONcgM",
+        "pinKey": "B1x2RV3eZ"
+      }
+    },
+    {
+      "id": "SJeey89xf",
+      "input": {
+        "nodeId": "HJ4a0Hqgf",
+        "pinKey": "BJnQUR_BwyZ"
+      },
+      "output": {
+        "nodeId": "r1wr0S9lM",
+        "pinKey": "BJ5_aB9gz"
+      }
+    },
+    {
+      "id": "SJtd6UqlM",
+      "input": {
+        "nodeId": "B1vo_Nclz",
+        "pinKey": "HkegHp8cez"
+      },
+      "output": {
+        "nodeId": "rJ4Bpmcxf",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "SJwhsr9xM",
+      "input": {
+        "nodeId": "rJWNHNcxf",
+        "pinKey": "HyB81V5lf"
+      },
+      "output": {
+        "nodeId": "Bym3sS9lf",
+        "pinKey": "Hke9sScgf"
+      }
+    },
+    {
+      "id": "SyKkFEcgz",
+      "input": {
+        "nodeId": "B1vo_Nclz",
+        "pinKey": "HJv3OVcgG"
+      },
+      "output": {
+        "nodeId": "H12Fv45xM",
+        "pinKey": "S1DCLE5lz"
+      }
+    },
+    {
+      "id": "Syn75NqlG",
+      "input": {
+        "nodeId": "Byum9Ecef",
+        "pinKey": "H1v3lCu8-"
+      },
+      "output": {
+        "nodeId": "S1PRYNcgG",
+        "pinKey": "BJ--G1tI-"
+      }
+    },
+    {
+      "id": "r1D-gD5eM",
+      "input": {
+        "nodeId": "r1wr0S9lM",
+        "pinKey": "r1QQT8qlf"
+      },
+      "output": {
+        "nodeId": "SJKgxD9xz",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "r1lqDN9ef",
+      "input": {
+        "nodeId": "H12Fv45xM",
+        "pinKey": "HJ6ED4qlG"
+      },
+      "output": {
+        "nodeId": "rJWNHNcxf",
+        "pinKey": "S1DCLE5lz"
+      }
+    },
+    {
+      "id": "r1qZlP9lM",
+      "input": {
+        "nodeId": "SJgYAH5gG",
+        "pinKey": "Sy1k6Ucgz"
+      },
+      "output": {
+        "nodeId": "SJKgxD9xz",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "rJWYhU9lz",
+      "input": {
+        "nodeId": "HyB4y45lf",
+        "pinKey": "SyFw28cxz"
+      },
+      "output": {
+        "nodeId": "rJ4Bpmcxf",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "rk66W89ef",
+      "input": {
+        "nodeId": "SJgYAH5gG",
+        "pinKey": "HJ6ED4qlG"
+      },
+      "output": {
+        "nodeId": "r1wr0S9lM",
+        "pinKey": "H1BLeL9xz"
+      }
+    },
+    {
+      "id": "rkQwgv9xz",
+      "input": {
+        "nodeId": "SJKgxD9xz",
+        "pinKey": "B1CYim5lf"
+      },
+      "output": {
+        "nodeId": "B16QgPcgM",
+        "pinKey": "B1x2RV3eZ"
+      }
+    },
+    {
+      "id": "ryTyp8clf",
+      "input": {
+        "nodeId": "H12Fv45xM",
+        "pinKey": "Sy1k6Ucgz"
+      },
+      "output": {
+        "nodeId": "rJ4Bpmcxf",
+        "pinKey": "r1tz3LqxG"
+      }
+    },
+    {
+      "id": "ryzJnr9lG",
+      "input": {
+        "nodeId": "Bym3sS9lf",
+        "pinKey": "ByJHjHcgM"
+      },
+      "output": {
+        "nodeId": "H10RsrqlG",
+        "pinKey": "B1x2RV3eZ"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "boundValues": {
+        "B1x2RV3eZ": 2
+      },
+      "id": "B16QgPcgM",
+      "label": "S2",
+      "position": {
+        "x": 442,
+        "y": 102
+      },
+      "type": "xod/core/constant-number"
+    },
+    {
+      "id": "B1vo_Nclz",
+      "position": {
+        "x": 136,
+        "y": 816
+      },
+      "type": "@/midi-noteon"
+    },
+    {
+      "boundValues": {
+        "HJCWLAdSwyW": 1,
+        "rkpbU0OrwyZ": 127
+      },
+      "id": "BJ6pcH9lG",
+      "position": {
+        "x": 102,
+        "y": 1122
+      },
+      "type": "xod/core/map-range"
+    },
+    {
+      "boundValues": {
+        "ByNiWkt8Z": 11
+      },
+      "id": "BJjb3Vqlf",
+      "label": "button11",
+      "position": {
+        "x": 408,
+        "y": 1020
+      },
+      "type": "xod/common-hardware/button"
+    },
+    {
+      "boundValues": {
+        "B1x2RV3eZ": 48
+      },
+      "id": "By2iwN9lf",
+      "label": "C4",
+      "position": {
+        "x": 136,
+        "y": 510
+      },
+      "type": "xod/core/constant-number"
+    },
+    {
+      "id": "BybEqNqlG",
+      "position": {
+        "x": 170,
+        "y": 918
+      },
+      "type": "@/midi-noteoff"
+    },
+    {
+      "id": "Bym3sS9lf",
+      "position": {
+        "x": 170,
+        "y": 306
+      },
+      "type": "@/midi-music-note"
+    },
+    {
+      "id": "Byum9Ecef",
+      "position": {
+        "x": 374,
+        "y": 816
+      },
+      "type": "xod/core/pulse-on-false"
+    },
+    {
+      "boundValues": {
+        "B1x2RV3eZ": "C#5"
+      },
+      "id": "H10RsrqlG",
+      "label": "C#5",
+      "position": {
+        "x": 170,
+        "y": 204
+      },
+      "type": "xod/core/constant-string"
+    },
+    {
+      "id": "H12Fv45xM",
+      "position": {
+        "x": 136,
+        "y": 612
+      },
+      "type": "@/midi-note"
+    },
+    {
+      "boundValues": {
+        "HkqmLAOrD1W": 13
+      },
+      "id": "HJ4a0Hqgf",
+      "label": "add",
+      "position": {
+        "x": 612,
+        "y": 306
+      },
+      "type": "xod/core/add"
+    },
+    {
+      "id": "HkejZ2NclG",
+      "position": {
+        "x": 408,
+        "y": 1122
+      },
+      "type": "xod/core/pulse-on-false"
+    },
+    {
+      "boundValues": {
+        "B1x2RV3eZ": 72
+      },
+      "description": "\n",
+      "id": "HkprqV9gG",
+      "label": "C6",
+      "position": {
+        "x": 68,
+        "y": 714
+      },
+      "type": "xod/core/constant-number"
+    },
+    {
+      "id": "HyB4y45lf",
+      "position": {
+        "x": 34,
+        "y": 204
+      },
+      "type": "@/midi-read-thru"
+    },
+    {
+      "boundValues": {
+        "B1x2RV3eZ": 2
+      },
+      "id": "S1F21L9xG",
+      "label": "2",
+      "position": {
+        "x": 714,
+        "y": 306
+      },
+      "type": "xod/core/constant-number"
+    },
+    {
+      "boundValues": {
+        "ByNiWkt8Z": 10
+      },
+      "id": "S1PRYNcgG",
+      "label": "button10",
+      "position": {
+        "x": 374,
+        "y": 714
+      },
+      "type": "xod/common-hardware/button"
+    },
+    {
+      "id": "S1g85H5xz",
+      "position": {
+        "x": 102,
+        "y": 1020
+      },
+      "type": "xod/common-hardware/pot"
+    },
+    {
+      "id": "SJKgxD9xz",
+      "position": {
+        "x": 510,
+        "y": 102
+      },
+      "type": "@/midi-config"
+    },
+    {
+      "boundValues": {
+        "ryfB-EqeG": 50
+      },
+      "id": "SJgYAH5gG",
+      "position": {
+        "x": 612,
+        "y": 408
+      },
+      "type": "@/midi-note"
+    },
+    {
+      "id": "r1wr0S9lM",
+      "position": {
+        "x": 612,
+        "y": 204
+      },
+      "type": "@/midi-note-message"
+    },
+    {
+      "id": "r1xtgxP5gG",
+      "position": {
+        "x": 510,
+        "y": 204
+      },
+      "type": "@/midi-read-thru"
+    },
+    {
+      "id": "rJ4Bpmcxf",
+      "position": {
+        "x": 34,
+        "y": 102
+      },
+      "type": "@/midi-config"
+    },
+    {
+      "id": "rJWNHNcxf",
+      "position": {
+        "x": 170,
+        "y": 408
+      },
+      "type": "@/midi-note"
+    },
+    {
+      "id": "rJtAjV5xG",
+      "position": {
+        "x": 170,
+        "y": 1224
+      },
+      "type": "@/midi-notetoggle"
+    },
+    {
+      "boundValues": {
+        "B1x2RV3eZ": 300
+      },
+      "id": "rka-ONcgM",
+      "label": "1/2",
+      "position": {
+        "x": 204,
+        "y": 510
+      },
+      "type": "xod/core/constant-number"
+    }
+  ]
+}

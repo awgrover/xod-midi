@@ -1,0 +1,122 @@
+"manual" serial pins -- any arduino
+
+Write a library that can construct midi commands and send them. flow control?
+Just Serial.write(somebinary)
+
+e.g. https://www.arduino.cc/en/Tutorial/Midi
+
+A library -- all arduino
+https://playground.arduino.cc/Main/MIDILibrary
+callback->tree invoke
+a check-for-anything every loop or so: Midi.read()
+* interferes w/standard usb programming (& console)
+* can use softwareserial or hardware Serial2...
+
+Complete? Usable?
+
+What about the midi-usb lib?
+
+Hardware like
+https://learn.sparkfun.com/tutorials/midi-shield-hookup-guide
+?
+
+dox said:
+note on/off
+program change from buttons  no lag!
+control change from pots
+filter midi messages
+	type of messges, etc
+
+so.
+
+install the FortySevenEffects/arduino_midi_library
+	* to arduino and then copy
+	* manual insert into $xodinstall/....
+	* into __lib__ ?
+	* include with nodes?
+	* git clone, ln to src/
+
+
+
+Life cycle
+
+global MIDI_CREATE_DEFAULT_INSTANCE(); -> MIDI object
+	default to shield...
+		Leonardo, Due and other USB boards use Serial1 by default
+	or usb if correct arduino?
+	Settngs
+		struct MySettings : public midi::DefaultSettings { 
+			static const X something = new global value...
+			}
+			I don't see a way to do this w/o ui->code-generation hooks
+			
+	MIDI_CREATE_CUSTOM_INSTANCE(HardwareSerial, Serial2, MIDI, MySettings);
+	MIDI_CREATE_CUSTOM_INSTANCE(Type, SerialPort, Name, Settings ) 		   	
+	-> midi::MidiInterface<Type, Settings> Name((Type&)SerialPort);
+
+	Constructor
+		MidiInterface<SerialPort, Settings>::MidiInterface(SerialPort& inSerial)
+			<Serial|Serial2.., my override settings type> xx( (HardwareSeria|SoftwareSeriall&) blah)
+			
+setup MIDI.begin(MIDI_CHANNEL_OMNI);
+	channel, default=1
+	Enable Soft Thru, everything at the input is sent back
+loop
+	MIDI.read(); checks, required for midi-thru & receiving
+		so, a continous optimization: pulse in...
+	** Problem: has to be a node w/continous...
+		
+nodes
+config node
+	default
+	custom serial
+		problem: can't do 'default' w/o explicit, no override...?
+		because of global constructor 
+	custom as many as you want
+		** Problem: nodes would need an input, a context: ambient object
+	* Require a config node
+		expose a pulse-input for handle-reads/thru
+		does the MIDI.read()
+		int for which serial 0,1,.....	
+MIDI.sendNoteOn(42, 127, 1);
+	note, velocity, channel
+info/version
+	git name: Forty...
+	MIDI_LIBRARY_VERSION_MAJOR
+	MIDI_LIBRARY_VERSION_MINOR
+	MIDI_LIBRARY_VERSION_PATCH
+changing "global" behavior
+	no midi-thru
+Incoming
+	like clock/pulse generator?	
+	MIDI.setHandleNoteOn(doSomeStuffWithNoteOn);
+		various signatures
+		sethandleControlChange(& f(byte channel, byte number, byte value))
+		MIDI.disconnectCallbackFromType(midi::NoteOn);
+	A node for the type of thing: handleNoteOff
+	inputs: enable/disable
+	with outputs byte channel, byte note, byte velocity & pulse
+Filtering
+	a note, condition, out
+
+Pattern 1
+	config object, 1 of them
+	nodes use ambient MIDI
+Pattern 2
+	each node has an input for which Serial
+Pattern 3
+	multiple config items
+	each node has a config input (int->&)
+	
+XOD Pattern
+	0. an object manages it: Serial2, neopixel-pin9, neo10
+	1. the global can optionally take some args
+	2. requires a heartbeat (at <<baudrate/8 )
+	3. multiple instances of the object, indicate which object to a node
+	4. non-atom data: notes, Serial2, lists...
+	5. enums in/out (actually UI label->value, like select/option) eg. Serial1|2|..., MidiControlChangeNumber
+
+
+
+
+

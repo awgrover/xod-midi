@@ -1,0 +1,49 @@
+{
+  "comments": [
+    {
+      "content": "Allow upper/lower?",
+      "id": "SJsb2B9xf",
+      "position": {
+        "x": 238,
+        "y": 102
+      },
+      "size": {
+        "height": 51,
+        "width": 170
+      }
+    }
+  ],
+  "description": "Convert a note \"name\" to a midi note-number",
+  "nodes": [
+    {
+      "id": "BJstoHclM",
+      "position": {
+        "x": 136,
+        "y": 204
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "boundValues": {
+        "__out__": "C5"
+      },
+      "description": "Note names to midi-note-numbers. <note><#><octave>. So C#5, etc.",
+      "id": "ByJHjHcgM",
+      "label": "name",
+      "position": {
+        "x": 136,
+        "y": 102
+      },
+      "type": "xod/patch-nodes/input-string"
+    },
+    {
+      "id": "Hke9sScgf",
+      "label": "midi",
+      "position": {
+        "x": 136,
+        "y": 306
+      },
+      "type": "xod/patch-nodes/output-number"
+    }
+  ]
+}

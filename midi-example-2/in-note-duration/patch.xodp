@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "content": "no output of which node,\nnor which channel",
+      "id": "HksfNU5xf",
+      "position": {
+        "x": 340,
+        "y": 408
+      },
+      "size": {
+        "height": 51,
+        "width": 238
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "ByH5zIqez",
+      "input": {
+        "nodeId": "HyZqGU5eM",
+        "pinKey": "Bk74I0_SPyb"
+      },
+      "output": {
+        "nodeId": "HkGLzU9eM",
+        "pinKey": "SJ2fCH5gf"
+      }
+    },
+    {
+      "id": "H1ZuzL5xG",
+      "input": {
+        "nodeId": "B1aPfLcxz",
+        "pinKey": "Bk74I0_SPyb"
+      },
+      "output": {
+        "nodeId": "HkGLzU9eM",
+        "pinKey": "H1BLeL9xz"
+      }
+    },
+    {
+      "id": "HyqEQ8qlz",
+      "input": {
+        "nodeId": "HkGLzU9eM",
+        "pinKey": "Hyh4ZL5xM"
+      },
+      "output": {
+        "nodeId": "BkLE7Lqxz",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "S15WQI9eM",
+      "input": {
+        "nodeId": "HkGLzU9eM",
+        "pinKey": "ry_fbLqef"
+      },
+      "output": {
+        "nodeId": "S1wZX85gM",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "SJmjGL9xG",
+      "input": {
+        "nodeId": "SkC9fU9eG",
+        "pinKey": "BypX80uSD1Z"
+      },
+      "output": {
+        "nodeId": "HyZqGU5eM",
+        "pinKey": "BkEVI0uHwJb"
+      }
+    },
+    {
+      "id": "ryVhGLclf",
+      "input": {
+        "nodeId": "r172zL5xz",
+        "pinKey": "__in__"
+      },
+      "output": {
+        "nodeId": "SkC9fU9eG",
+        "pinKey": "HyRmUCdBDkZ"
+      }
+    },
+    {
+      "id": "ryWozI9gf",
+      "input": {
+        "nodeId": "SkC9fU9eG",
+        "pinKey": "rkJ4URuHDJ-"
+      },
+      "output": {
+        "nodeId": "B1aPfLcxz",
+        "pinKey": "BkEVI0uHwJb"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "B1aPfLcxz",
+      "position": {
+        "x": 238,
+        "y": 204
+      },
+      "type": "xod/core/system-time"
+    },
+    {
+      "boundValues": {
+        "__out__": -1
+      },
+      "description": "-1: any\n0..127 : only that one",
+      "id": "BkLE7Lqxz",
+      "label": "note",
+      "position": {
+        "x": 238,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundValues": {
+        "SytilUqlz": 0
+      },
+      "id": "HkGLzU9eM",
+      "position": {
+        "x": 136,
+        "y": 102
+      },
+      "type": "@/midi-note-message"
+    },
+    {
+      "id": "HyZqGU5eM",
+      "position": {
+        "x": 306,
+        "y": 204
+      },
+      "type": "xod/core/system-time"
+    },
+    {
+      "description": "0: any\n1..16 : only that one",
+      "id": "S1wZX85gM",
+      "label": "channel",
+      "position": {
+        "x": 136,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "id": "SkC9fU9eG",
+      "position": {
+        "x": 238,
+        "y": 306
+      },
+      "type": "xod/core/subtract"
+    },
+    {
+      "description": "in seconds",
+      "id": "r172zL5xz",
+      "label": "duration",
+      "position": {
+        "x": 238,
+        "y": 408
+      },
+      "type": "xod/patch-nodes/output-number"
+    }
+  ]
+}
