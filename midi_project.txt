@@ -1,3 +1,78 @@
+can you provide information on how to code the arduino to use something like:
+https://www.ebay.de/itm/MIDI-Shield-Musical-Breakout-Board-Instrument-Digital-Interface-Adapter-Plate/272750438796?hash=item3f8131698c:g:HJUAAOSwN2VZXafh
+I'm also looking at https://learn.sparkfun.com/tutorials/midi-shield-hookup-guide
+----
+shields, etc., choosing ports
+softwared serial: other pins
+	#include <softwareserial.h>
+	SoftwareSerial Serial8n9(8,9);
+	MIDI_CREATE_INSTANCE(SoftwareSerial, SoftSerial, MIDI);
+	// sparkfun midi shield can be software-serial, not sure exactly
+----
+** serial event
+** MIDI.turnThruOff();
+
+likes note-name-to-note-number
+"note" should be on & off
+	propose simple note-on-off
+	duration is derived
+	button driven is derived
+		on/off
+* published
+	change to awgrover/
+ccontrol change
+	controller #
+	channel
+	change v
+	* rotary encoder....
+	* defaults?
+	Button is derived (on fall edge, minimal debounce)
+	variant
+		!change #, but:
+		bank lsb, bank msb, change #
+program change
+	x,y
+	bank select is important
+Bank Select(msb,lsb, pc) appears to be:
+	control-change #0,v:msb
+	cc #32, v:lsb
+	then a pc
+	
+pitch-bend
+* should I validate channel? 1..16
+	values? 0.127 usually
+* Does note need a "sent" output?
+	a sent-play
+	a sent-stop
+	why? you always have a stop-pulse
+* naming: "bank-program-change" || with "program-change" (sort)
+	are msb/lsb usually documented in hex?
+* "soft-thru" is broken
+
+---
+I "published" my x-midi library. It is `awgrover/x-midi`. Get it with "Add Library".
+
+* Added control-change
+* Added program-change
+
+---
+
+* update wiki design notes
+* note-name-to-# is useful
+	want enum
+* discuss tempo more
+			
+Figure out the midi shield
+	how to pick it
+	https://www.ebay.de/itm/MIDI-Shield-Musical-Breakout-Board-Instrument-Digital-Interface-Adapter-Plate/272750438796?hash=item3f8131698c:g:HJUAAOSwN2VZXafh
+	
+beats could be a diff set of nodes
+	
+maybe:
+	channel is serial #....
+	
+
+	
 "manual" serial pins -- any arduino
 
 Write a library that can construct midi commands and send them. flow control?
@@ -30,13 +105,15 @@ filter midi messages
 so.
 
 install the FortySevenEffects/arduino_midi_library
-	* to arduino and then copy
-	* manual insert into $xodinstall/....
-	* into __lib__ ?
-	* include with nodes?
-	* git clone, ln to src/
-
-
+	* run arduino-ide
+	* sketch:manage-libraries
+		MIDI Library by Forty Seven Effects
+	* create a link (shortcut) from xod's library to the arduino-ide
+		# linux
+		sudo ln -s ~/Arduino/libraries/MIDI_Library /opt/XOD IDE/resources/arduino-libraries
+		# windows:
+		???
+		
 
 Life cycle
 
@@ -104,7 +181,7 @@ Pattern 1
 	nodes use ambient MIDI
 Pattern 2
 	each node has an input for which Serial
-Pattern 3
+Pattern x
 	multiple config items
 	each node has a config input (int->&)
 	
